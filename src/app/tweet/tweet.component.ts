@@ -9,6 +9,8 @@ export class TweetComponent implements OnInit {
 
   constructor() { }
 
+  name = localStorage.getItem('user');
+
   ngOnInit(): void {
   }
 
