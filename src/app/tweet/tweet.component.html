@@ -1,7 +1,29 @@
-<div class="container">
-    <div class="row">
+<div class="container-fluid">
+    <div class="row g-3">
         <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
            <h3>hi {{name}}</h3> 
+        </div>
+        <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+           <textarea name="message" type="text" id="" cols="30" rows="10" class="form-control" [(ngModel)]="message">
+
+           </textarea>
+           <button class="btn btn-info mt-3" (click)=" addTweet()">submit</button>
+        </div>
+        <br>
+        <br>
+
+        <div class="row g-3">
+            <div *ngFor="let i of viewTweets" class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+        
+                <div class="card text-bg-primary mb-3">
+                    <div class="card-header">{{i.name}}</div>
+                    <div class="card-body">
+                        <h5 class="card-title">{{i.message}}</h5>
+                        <p class="card-text">{{i.postdate}}</p>
+                    </div>
+                </div>
+        
+            </div>
         </div>
     </div>
 </div>

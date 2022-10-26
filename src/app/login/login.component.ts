@@ -28,7 +28,8 @@ export class LoginComponent implements OnInit {
 
       if (res.length > 0) {
         alert('Login Successful');
-        localStorage.setItem('user',res[0].name);
+        localStorage.setItem('user', res[0].name);
+        localStorage.setItem('id', res[0].id);console.log(res[0].id);
         this.router.navigate(['/tweet']);
       }
       else {

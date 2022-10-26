@@ -32,7 +32,6 @@ export class SignupComponent implements OnInit {
       console.log(res);
 
     })
-    alert('User added successfully');
     this.name = '';
     this.dob = '';
     this.place = '';
@@ -40,6 +39,7 @@ export class SignupComponent implements OnInit {
     this.email = '';
     this.password = '';
     this.router.navigate(['/login']);
+    alert('User added successfully');
 
   }
 
